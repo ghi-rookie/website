@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>智慧を、紡ぐ。| 株式会社G.H.I. — 新規事業開発・事業戦略アドバイザリー</title>
+<meta name="description" content="株式会社G.H.I.は、新規事業開発・事業戦略を支援するアドバイザリーファームです。経営者コーチング、DX・デジタル戦略、海外進出支援まで、構想から実装まで伴走します。智慧を、紡ぐ。">
+<meta name="keywords" content="新規事業開発,事業戦略,アドバイザリー,コンサルティング,海外進出支援,DX,デジタル戦略,経営者コーチング,組織開発,G.H.I.">
+<link rel="canonical" href="https://g-h-i.jp/">
+<!-- OGP -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="株式会社G.H.I.">
+<meta property="og:title" content="智慧を、紡ぐ。| 株式会社G.H.I.">
+<meta property="og:description" content="新規事業開発・事業戦略のアドバイザリーファーム。経営者コーチング、DX、海外進出支援まで、構想から実装まで伴走します。">
+<meta property="og:url" content="https://g-h-i.jp/">
+<meta property="og:image" content="https://g-h-i.jp/assets/tokyo.jpg">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="智慧を、紡ぐ。| 株式会社G.H.I.">
+<meta name="twitter:description" content="新規事業開発・事業戦略のアドバイザリーファーム。構想から実装まで伴走します。">
+<meta name="twitter:image" content="https://g-h-i.jp/assets/tokyo.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "株式会社G.H.I.",
+  "alternateName": "G.H.I. Inc.",
+  "url": "https://g-h-i.jp/",
+  "logo": "https://g-h-i.jp/assets/logo_black.png",
+  "slogan": "智慧を、紡ぐ。",
+  "description": "新規事業開発・事業戦略のアドバイザリーファーム。経営者コーチング、人事・組織開発、DX・デジタル戦略、海外進出支援を提供。",
+  "email": "contact@g-h-i.jp",
+  "foundingDate": "2015-04-16",
+  "founder": {
+    "@type": "Person",
+    "name": "室山 真一郎",
+    "jobTitle": "代表取締役CEO"
+  },
+  "areaServed": ["JP", "Asia"],
+  "knowsAbout": ["新規事業開発", "事業戦略", "経営者コーチング", "DX", "海外進出支援", "組織開発"]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ============ Tokens ============ */
+:root{
+  --ink:#14110E;          /* 墨 */
+  --ink-2:#3F3A33;        /* 墨・薄 */
+  --ink-3:#7A7268;        /* 灰墨 */
+  --paper:#FBF8F3;        /* 和紙 */
+  --paper-2:#F1EBE1;      /* 和紙・濃 */
+  --line:#E0D7C9;         /* 罫 */
+  --orange:#E37221;       /* 柿色 */
+  --apricot:#F3BE8E;      /* 夕景の杏 */
+  --white:#FFFFFF;
+  --serif:'Cormorant Garamond',serif;
+  --sans:'Zen Kaku Gothic New',sans-serif;
+  --thread:1px;           /* 継承の糸 */
+  --gutter:clamp(24px,6vw,72px);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);font-weight:300;
+  color:var(--ink);background:var(--paper);
+  line-height:2;letter-spacing:.02em;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+::selection{background:var(--orange);color:var(--white)}
+
+/* ============ 継承の糸（縦のライン） ============ */
+.thread{
+  position:fixed;top:0;bottom:0;left:max(calc((100vw - 1120px)/2 - 56px),28px);
+  width:var(--thread);background:linear-gradient(180deg,transparent,var(--line) 12%,var(--line) 88%,transparent);
+  z-index:1;pointer-events:none;
+  opacity:0;transition:opacity .8s ease;
+}
+.thread.on{opacity:1}
+@media(max-width:1100px){.thread{display:none}}
+
+/* ============ Header ============ */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:28px var(--gutter);
+  transition:padding .5s ease,background .5s ease,box-shadow .5s ease;
+}
+header.scrolled{
+  background:rgba(251,248,243,.92);
+  backdrop-filter:blur(16px);
+  padding:14px var(--gutter);
+  box-shadow:0 1px 0 var(--line);
+}
+.brand{display:flex;align-items:center}
+.brand img{height:30px;width:auto;transition:opacity .4s ease}
+nav{display:flex;gap:34px;align-items:center}
+nav a{
+  font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;font-weight:400;
+  color:rgba(255,255,255,.82);transition:color .4s ease;position:relative;padding:4px 0;
+}
+header.scrolled nav a{color:var(--ink-2)}
+nav a::after{content:'';position:absolute;left:0;bottom:-1px;width:0;height:1px;background:var(--orange);transition:width .35s ease}
+nav a:hover{color:var(--orange)}
+nav a:hover::after{width:100%}
+.nav-toggle{display:none}
+
+/* ============ Hero ============ */
+.hero{
+  min-height:100svh;position:relative;overflow:hidden;
+  display:flex;align-items:flex-end;
+  color:var(--white);background:#131A26;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:url('assets/tokyo.jpg') center/cover no-repeat;
+  animation:slowZoom 28s ease-out forwards;
+  transform-origin:60% 40%;
+}
+@keyframes slowZoom{from{transform:scale(1.08)}to{transform:scale(1)}}
+.hero-shade{
+  position:absolute;inset:0;pointer-events:none;
+  background:
+    linear-gradient(100deg,rgba(10,14,22,.84) 0%,rgba(10,14,22,.5) 40%,rgba(10,14,22,.04) 72%),
+    linear-gradient(0deg,rgba(10,14,22,.72) 0%,rgba(10,14,22,.12) 38%,rgba(10,14,22,0) 60%);
+}
+.hero-inner{
+  position:relative;z-index:2;width:100%;
+  max-width:1120px;margin:0 auto;
+  padding:0 var(--gutter) clamp(72px,12vh,128px);
+}
+.hero .eyebrow{
+  font-family:var(--serif);font-style:italic;font-weight:400;
+  font-size:clamp(1.05rem,1.8vw,1.35rem);letter-spacing:.06em;
+  color:var(--apricot);margin-bottom:28px;
+  opacity:0;animation:rise 1s .3s forwards cubic-bezier(.16,.84,.3,1);
+}
+.hero h1{
+  font-weight:400;
+  font-size:clamp(2.3rem,5.6vw,4.6rem);
+  line-height:1.32;letter-spacing:.06em;
+  margin-bottom:30px;
+  text-shadow:0 2px 40px rgba(5,10,18,.5);
+  opacity:0;animation:rise 1.1s .55s forwards cubic-bezier(.16,.84,.3,1);
+}
+.hero h1.copy{
+  font-size:clamp(2.9rem,7vw,5.8rem);
+  letter-spacing:.14em;line-height:1.2;
+}
+.hero .lede{
+  display:flex;align-items:center;gap:22px;
+  opacity:0;animation:rise 1.1s .85s forwards cubic-bezier(.16,.84,.3,1);
+}
+.hero .lede::before{content:'';width:46px;height:1px;background:var(--orange);flex:none}
+.hero .lede p{
+  font-size:.92rem;letter-spacing:.1em;line-height:2.1;
+  color:rgba(255,255,255,.88);max-width:520px;
+}
+@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+.scroll-cue{
+  position:absolute;right:var(--gutter);bottom:0;z-index:2;
+  writing-mode:vertical-rl;
+  font-size:.62rem;letter-spacing:.42em;text-transform:uppercase;
+  color:rgba(255,255,255,.66);
+  display:flex;align-items:center;gap:14px;padding-bottom:0;
+}
+.scroll-cue::after{content:'';width:1px;height:72px;background:rgba(255,255,255,.5);animation:cue 2.4s infinite ease-in-out}
+@keyframes cue{0%,100%{transform:scaleY(.25);transform-origin:top}55%{transform:scaleY(1);transform-origin:top}}
+
+/* ============ Section scaffolding ============ */
+section{position:relative}
+.sec{padding:clamp(96px,14vh,150px) var(--gutter)}
+.wrap{max-width:1120px;margin:0 auto;position:relative}
+/* 縦書きラベル — 継承の糸に結ばれる結び目 */
+.tate{
+  position:absolute;left:-56px;top:6px;
+  writing-mode:vertical-rl;text-orientation:mixed;
+  font-size:.72rem;letter-spacing:.5em;font-weight:400;color:var(--ink-3);
+  display:flex;align-items:center;gap:14px;
+}
+.tate::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--orange);margin-left:-3px}
+@media(max-width:1100px){
+  .tate{position:static;writing-mode:horizontal-tb;margin-bottom:18px;gap:10px;flex-direction:row}
+  .tate::before{margin:0}
+}
+.sec-en{
+  font-family:var(--serif);font-style:italic;font-weight:400;
+  font-size:1.05rem;color:var(--orange);letter-spacing:.04em;margin-bottom:12px;
+}
+.sec-title{
+  font-weight:400;font-size:clamp(1.7rem,3.4vw,2.6rem);
+  letter-spacing:.1em;line-height:1.5;
+}
+.reveal{opacity:0;transform:translateY(34px);transition:opacity 1s cubic-bezier(.16,.84,.3,1),transform 1s cubic-bezier(.16,.84,.3,1)}
+.reveal.in{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .hero-bg{animation:none}
+  .hero .eyebrow,.hero h1,.hero .lede{animation:none;opacity:1}
+}
+
+/* ============ Philosophy ============ */
+.philosophy{background:var(--paper)}
+.philosophy .grid{
+  display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(40px,6vw,88px);align-items:center;margin-top:24px;
+}
+.philosophy .latin{
+  font-family:var(--serif);font-style:italic;font-weight:500;
+  font-size:clamp(1.9rem,3.6vw,3rem);line-height:1.42;letter-spacing:.01em;
+}
+.philosophy .latin em{font-style:italic;color:var(--orange)}
+.philosophy .latin .attr{
+  display:block;font-style:normal;font-size:.95rem;letter-spacing:.22em;
+  color:var(--ink-3);margin-top:26px;font-weight:400;
+}
+.philosophy .body p{font-size:.95rem;line-height:2.3;color:var(--ink-2)}
+.philosophy .body p+p{margin-top:20px}
+.philosophy .body strong{font-weight:500;color:var(--ink)}
+
+/* ============ Services ============ */
+.services{background:var(--paper-2)}
+.svc-list{margin-top:60px;border-top:1px solid var(--line)}
+.svc{
+  display:grid;grid-template-columns:minmax(150px,220px) 1fr;gap:clamp(20px,4vw,56px);
+  padding:38px 8px;border-bottom:1px solid var(--line);
+  align-items:baseline;transition:background .4s ease,padding .4s ease;
+}
+.svc:hover{background:rgba(255,255,255,.55);padding-left:18px}
+.svc .en{
+  font-family:var(--serif);font-style:italic;font-size:1.05rem;color:var(--orange);
+}
+.svc h3{font-size:1.12rem;font-weight:500;letter-spacing:.08em;margin-bottom:8px}
+.svc p{font-size:.88rem;color:var(--ink-2);line-height:2.05;max-width:620px}
+
+/* ============ Approach（墨） ============ */
+.approach{background:var(--ink);color:var(--paper)}
+.approach .tate{color:rgba(251,248,243,.5)}
+.approach .sec-title{color:var(--paper)}
+.appr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(32px,4vw,56px);margin-top:64px}
+.appr h4{
+  font-family:var(--serif);font-style:italic;font-weight:500;
+  font-size:1.5rem;color:var(--apricot);margin-bottom:6px;letter-spacing:.02em;
+}
+.appr h5{font-size:1.02rem;font-weight:500;letter-spacing:.12em;margin-bottom:14px}
+.appr p{font-size:.86rem;line-height:2.05;color:rgba(251,248,243,.68)}
+.appr{padding-top:30px;border-top:1px solid rgba(251,248,243,.16)}
+
+/* ============ Track Record ============ */
+.record{background:var(--paper)}
+.rec-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1px;background:var(--line);border:1px solid var(--line);margin-top:60px;
+}
+.rec{
+  background:var(--paper);padding:42px 34px;transition:background .4s ease;
+}
+.rec:hover{background:var(--white)}
+.rec .en{font-family:var(--serif);font-style:italic;font-size:1rem;color:var(--orange);margin-bottom:14px}
+.rec h4{font-size:1.04rem;font-weight:500;letter-spacing:.06em;margin-bottom:10px}
+.rec p{font-size:.85rem;color:var(--ink-2);line-height:2}
+.rec-note{margin-top:34px;font-size:.76rem;color:var(--ink-3);letter-spacing:.06em}
+
+/* ============ About ============ */
+.about{background:var(--paper-2)}
+.about-grid{
+  display:grid;grid-template-columns:minmax(280px,420px) 1fr;
+  gap:clamp(40px,6vw,88px);align-items:center;margin-top:56px;
+}
+.about-photo{position:relative}
+.about-photo img{width:100%}
+.about-photo::after{
+  content:'gigantum humeris insidentes';
+  position:absolute;top:18px;right:-14px;
+  writing-mode:vertical-rl;
+  font-family:var(--serif);font-style:italic;font-size:.8rem;letter-spacing:.3em;
+  color:var(--ink-3);
+}
+.about-name{font-size:1.7rem;font-weight:500;letter-spacing:.1em}
+.about-name .en{
+  display:block;font-family:var(--serif);font-style:italic;font-weight:400;
+  font-size:1.05rem;color:var(--orange);letter-spacing:.08em;margin-top:6px;
+}
+.about-role{font-size:.8rem;letter-spacing:.2em;color:var(--ink-3);margin:10px 0 28px}
+.about-bio p{font-size:.9rem;line-height:2.15;color:var(--ink-2)}
+.about-bio p+p{margin-top:16px}
+
+/* ============ Company ============ */
+.company{background:var(--paper)}
+.cmp-table{margin-top:54px;border-top:1px solid var(--line)}
+.cmp-row{
+  display:grid;grid-template-columns:220px 1fr;gap:18px;
+  padding:24px 6px;border-bottom:1px solid var(--line);
+}
+.cmp-row dt{
+  font-family:var(--serif);font-style:italic;font-size:1rem;
+  color:var(--orange);padding-top:2px;
+}
+.cmp-row dd{font-size:.93rem;color:var(--ink)}
+.cmp-row dd small{display:block;font-size:.84rem;color:var(--ink-2);line-height:2;margin-top:4px}
+
+/* ============ Contact ============ */
+.contact{
+  position:relative;overflow:hidden;color:var(--white);
+  background:#131A26;
+}
+.contact .bg{
+  position:absolute;inset:0;
+  background:url('assets/tokyo.jpg') center 70%/cover no-repeat;
+}
+.contact .shade{
+  position:absolute;inset:0;
+  background:linear-gradient(0deg,rgba(10,14,22,.86),rgba(10,14,22,.55));
+}
+.contact .wrap{position:relative;z-index:2;text-align:center}
+.contact .sec-en{color:var(--apricot)}
+.contact h2{
+  font-weight:400;font-size:clamp(1.9rem,4.2vw,3rem);
+  letter-spacing:.12em;margin-bottom:24px;
+}
+.contact p{max-width:520px;margin:0 auto 42px;font-size:.92rem;letter-spacing:.06em;color:rgba(255,255,255,.85)}
+.btn{
+  display:inline-block;
+  font-size:.74rem;letter-spacing:.3em;text-transform:uppercase;
+  padding:18px 52px;border:1px solid rgba(255,255,255,.55);
+  transition:background .4s ease,color .4s ease,border-color .4s ease;
+}
+.btn:hover{background:var(--orange);border-color:var(--orange);color:var(--white)}
+
+/* ============ Footer ============ */
+footer{background:var(--ink);color:rgba(251,248,243,.55);padding:72px var(--gutter) 44px}
+.foot{max-width:1120px;margin:0 auto}
+.foot-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:36px}
+.foot-logo img{width:120px;opacity:.95}
+.foot-meta{font-size:.76rem;letter-spacing:.1em;line-height:2.2;text-align:right}
+.foot-copy{
+  margin-top:56px;padding-top:22px;border-top:1px solid rgba(251,248,243,.12);
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
+  font-size:.64rem;letter-spacing:.16em;color:rgba(251,248,243,.35);
+}
+.foot-copy .latin{font-family:var(--serif);font-style:italic;letter-spacing:.1em;font-size:.78rem}
+
+/* ============ Responsive ============ */
+@media(max-width:1024px){
+  .rec-grid{grid-template-columns:repeat(2,1fr)}
+  .appr-grid{grid-template-columns:1fr;gap:0}
+  .appr{padding:30px 0}
+}
+@media(max-width:860px){
+  nav{
+    position:fixed;inset:0 0 0 auto;width:min(78vw,320px);
+    background:var(--ink);flex-direction:column;justify-content:center;gap:30px;
+    transform:translateX(100%);transition:transform .5s cubic-bezier(.16,.84,.3,1);
+    padding:40px;z-index:105;
+  }
+  nav.open{transform:translateX(0)}
+  nav a{color:var(--paper)!important;font-size:.88rem}
+  .nav-toggle{
+    display:flex;flex-direction:column;gap:5px;cursor:pointer;
+    background:none;border:none;padding:8px;z-index:110;
+  }
+  .nav-toggle span{width:24px;height:1.5px;background:var(--white);transition:.4s ease}
+  header.scrolled .nav-toggle span{background:var(--ink)}
+  .nav-toggle.open span{background:var(--paper)}
+  .nav-toggle.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+  .nav-toggle.open span:nth-child(2){opacity:0}
+  .nav-toggle.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+  .philosophy .grid{grid-template-columns:1fr;gap:40px}
+  .svc{grid-template-columns:1fr;gap:8px}
+  .rec-grid{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr}
+  .about-photo{max-width:360px}
+  .cmp-row{grid-template-columns:1fr;gap:4px}
+  .foot-meta{text-align:left}
+  .scroll-cue{display:none}
+  .hero h1{font-size:clamp(1.9rem,8.2vw,2.3rem);letter-spacing:.04em}
+  .hero h1.copy{font-size:clamp(2.3rem,10.5vw,2.9rem);letter-spacing:.12em}
+}
+</style>
+</head>
+<body>
+
+<div class="thread" aria-hidden="true"></div>
+
+<header id="header">
+  <a href="#top" class="brand" aria-label="G.H.I. ホーム">
+    <img src="assets/lockup_white.png" alt="G.H.I." id="brandMark">
+  </a>
+  <button class="nav-toggle" id="navToggle" aria-label="メニューを開閉">
+    <span></span><span></span><span></span>
+  </button>
+  <nav id="nav">
+    <a href="#philosophy">Philosophy</a>
+    <a href="#services">Services</a>
+    <a href="#approach">Approach</a>
+    <a href="#record">Track Record</a>
+    <a href="#about">About</a>
+    <a href="#company">Company</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-shade" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <p class="eyebrow">gigantum humeris insidentes</p>
+    <!-- ▼▼ キャッチコピー（確定版） ▼▼ -->
+    <h1 class="copy">智慧を、紡ぐ。</h1>
+    <!-- ▲▲ キャッチコピーここまで ▲▲ -->
+    <div class="lede">
+      <p>先人が積み重ねてきた知見を、次世代の挑戦者へ。<br>構想から実装まで伴走する、少数精鋭のアドバイザリーファーム。</p>
+    </div>
+  </div>
+  <div class="scroll-cue">scroll</div>
+</section>
+
+<!-- ============ PHILOSOPHY ============ -->
+<section class="philosophy sec" id="philosophy">
+  <div class="wrap">
+    <div class="tate">理念</div>
+    <div class="reveal">
+      <p class="sec-en">Philosophy</p>
+      <h2 class="sec-title">巨人の肩の上に</h2>
+    </div>
+    <div class="grid">
+      <p class="latin reveal">"If I have seen further, it is by standing on the shoulders of <em>giants</em>."<span class="attr">— Isaac Newton, 1675</span></p>
+      <div class="body reveal">
+        <p>人は、先人の知恵と経験の積み重ねの上に立つことではじめて、より遠くを見渡すことができる。社名 G.H.I. — <strong>gigantum humeris insidentes</strong> は、ニュートンが引いたこの古い言葉に由来します。</p>
+        <p>私たち自身もまた、数多くの事業の現場で知見を積み上げてきました。その蓄積を<strong>次世代の挑戦者へと渡していくこと</strong>。それが、私たちの果たすべき役割だと考えています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="services sec" id="services">
+  <div class="wrap">
+    <div class="tate">事業</div>
+    <div class="reveal">
+      <p class="sec-en">What we do</p>
+      <h2 class="sec-title">提供サービス</h2>
+    </div>
+    <div class="svc-list">
+      <div class="svc reveal">
+        <div class="en">Strategy</div>
+        <div>
+          <h3>事業戦略・新規事業開発</h3>
+          <p>構想段階から事業化、グロースまで。戦略の立案にとどまらず、実行可能な打ち手へと落とし込み、伴走します。</p>
+        </div>
+      </div>
+      <div class="svc reveal">
+        <div class="en">Coaching</div>
+        <div>
+          <h3>経営者コーチング</h3>
+          <p>スタートアップから中小・中堅企業まで。経営者の意思決定に寄り添うコーチング／カウンセリング。</p>
+        </div>
+      </div>
+      <div class="svc reveal">
+        <div class="en">Organization</div>
+        <div>
+          <h3>人事・組織開発</h3>
+          <p>人事制度の設計、社員研修・教育訓練のコンサルティング、セミナーの企画・開催まで一貫して。</p>
+        </div>
+      </div>
+      <div class="svc reveal">
+        <div class="en">Digital</div>
+        <div>
+          <h3>DX・デジタル戦略</h3>
+          <p>DX、デジタルサービスに関する総合コンサルティング。技術を事業価値へと接続します。</p>
+        </div>
+      </div>
+      <div class="svc reveal">
+        <div class="en">Global</div>
+        <div>
+          <h3>海外進出支援</h3>
+          <p>アジアを中心とした海外市場への進出。現地での立ち上げ実績に基づく、実践的な支援を行います。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ APPROACH ============ -->
+<section class="approach sec" id="approach">
+  <div class="wrap">
+    <div class="tate">姿勢</div>
+    <div class="reveal">
+      <p class="sec-en">How we work</p>
+      <h2 class="sec-title">私たちの姿勢</h2>
+    </div>
+    <div class="appr-grid">
+      <div class="appr reveal">
+        <h4>Essence</h4>
+        <h5>本質から考える</h5>
+        <p>表層の課題ではなく、その背後にある構造を捉える。問いの立て方そのものを問い直すところから始めます。</p>
+      </div>
+      <div class="appr reveal">
+        <h4>Together</h4>
+        <h5>当事者として伴走する</h5>
+        <p>提言を渡して終わりにはしません。実行の現場に立ち、成果が生まれるまで共に手を動かします。</p>
+      </div>
+      <div class="appr reveal">
+        <h4>Crossover</h4>
+        <h5>越境する視座</h5>
+        <p>産業の壁も、国境も越えて。複数の領域を歩んできた経験を、一つの視点に束ねて提供します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRACK RECORD ============ -->
+<section class="record sec" id="record">
+  <div class="wrap">
+    <div class="tate">実績</div>
+    <div class="reveal">
+      <p class="sec-en">Track record</p>
+      <h2 class="sec-title">ご支援の領域</h2>
+    </div>
+    <div class="rec-grid">
+      <div class="rec reveal">
+        <div class="en">Finance &amp; Insurance</div>
+        <h4>金融・保険</h4>
+        <p>金融機関の新規サービス開発、デジタルチャネル戦略の立案を支援。レガシー産業における事業変革を伴走しました。</p>
+      </div>
+      <div class="rec reveal">
+        <div class="en">Retail &amp; Commerce</div>
+        <h4>小売・コマース</h4>
+        <p>大手ECプラットフォームでの事業統括経験をもとに、販売事業の立ち上げ・拡大、店舗網の構築を支援します。</p>
+      </div>
+      <div class="rec reveal">
+        <div class="en">Technology</div>
+        <h4>テクノロジー</h4>
+        <p>大手テック企業での新規事業立ち上げ実績を背景に、構想から収益化までのプロダクト戦略を描きます。</p>
+      </div>
+      <div class="rec reveal">
+        <div class="en">Healthcare</div>
+        <h4>ヘルスケア</h4>
+        <p>ヘルスケア事業の代表経験に基づき、規制産業における新規サービスの設計と事業化を支援します。</p>
+      </div>
+      <div class="rec reveal">
+        <div class="en">Entertainment &amp; Media</div>
+        <h4>エンタメ・メディア</h4>
+        <p>コンテンツ・メディア領域における新規事業開発、AI活用によるクリエイティブ事業の立ち上げを支援します。</p>
+      </div>
+      <div class="rec reveal">
+        <div class="en">Global</div>
+        <h4>海外・クロスボーダー</h4>
+        <p>アジア各地での事業立ち上げ・子会社経営の経験をもとに、海外進出とグローバル展開を支援します。</p>
+      </div>
+    </div>
+    <p class="rec-note reveal">※ 守秘義務に基づき、具体的な企業名・案件名の記載は控えております。詳細は個別にご相談ください。</p>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about sec" id="about">
+  <div class="wrap">
+    <div class="tate">代表</div>
+    <div class="reveal">
+      <p class="sec-en">Founder</p>
+      <h2 class="sec-title">代表者略歴</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-photo reveal">
+        <img src="assets/portrait.jpg" alt="代表取締役CEO 室山真一郎のポートレート">
+      </div>
+      <div class="reveal">
+        <h3 class="about-name">室山 真一郎<span class="en">Shinichiro Muroyama</span></h3>
+        <p class="about-role">株式会社G.H.I. 代表取締役 CEO</p>
+        <div class="about-bio">
+          <p>同志社大学経済学部卒業後、住友海上火災保険（現・三井住友海上火災保険）に入社。テイクアンドギヴ・ニーズでは事業立ち上げを経て同社のターンアラウンドを成功させ、2009年に取締役CFOに就任。海外事業担当として上海に赴任し、アジア各地で事業開発を手がけ、各子会社の代表取締役を務めました。</p>
+          <p>2014年にAmazon Japanへ入社。総合家電事業を統括し、プライムデーや大型家電ストアの立ち上げを主導。LINE株式会社では執行役員として数々の新規事業をリードし、LINEヘルスケア代表取締役を歴任。住友商事を経て、2025年4月より現職。日・英・中のトライリンガル。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMPANY ============ -->
+<section class="company sec" id="company">
+  <div class="wrap">
+    <div class="tate">概要</div>
+    <div class="reveal">
+      <p class="sec-en">Profile</p>
+      <h2 class="sec-title">会社概要</h2>
+    </div>
+    <dl class="cmp-table reveal">
+      <div class="cmp-row"><dt>Company</dt><dd>株式会社 G.H.I.</dd></div>
+      <div class="cmp-row"><dt>Representative</dt><dd>代表取締役 CEO　室山 真一郎</dd></div>
+      <div class="cmp-row"><dt>Established</dt><dd>2015年4月16日</dd></div>
+      <div class="cmp-row"><dt>Capital</dt><dd>100,000円</dd></div>
+      <div class="cmp-row"><dt>Business</dt><dd>事業戦略・新規事業開発アドバイザリー<small>スタートアップならびに中小・中堅企業経営者のコーチング／カウンセリング ・ 人事制度、社員の業務研修、教育訓練のコンサルティングおよびセミナー開催 ・ DX、デジタルサービスに関する総合コンサルティング ・ 海外進出支援およびコンサルティング ・ 上記に関連する各種業務</small></dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact sec" id="contact">
+  <div class="bg" aria-hidden="true"></div>
+  <div class="shade" aria-hidden="true"></div>
+  <div class="wrap reveal">
+    <p class="sec-en">Get in touch</p>
+    <h2>事業の、その先へ。</h2>
+    <p>新規事業のご相談、経営課題のご相談など、まずはお気軽にお問い合わせください。</p>
+    <a href="mailto:contact@g-h-i.jp?subject=%E3%80%90G.H.I.%E3%80%91%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B" class="btn">お問い合わせ</a>
+  </div>
+</section>
+
+<footer>
+  <div class="foot">
+    <div class="foot-top">
+      <div class="foot-logo"><img src="assets/logo_white.png" alt="G.H.I. — gigantum humeris insidentes"></div>
+      <div class="foot-meta">
+        株式会社 G.H.I.<br>
+        <a href="mailto:contact@g-h-i.jp?subject=%E3%80%90G.H.I.%E3%80%91%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">contact@g-h-i.jp</a><br>
+        Est. 2015
+      </div>
+    </div>
+    <div class="foot-copy">
+      <span class="latin">gigantum humeris insidentes</span>
+      <span>© 2025 G.H.I. Inc. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const header=document.getElementById('header');
+const brandMark=document.getElementById('brandMark');
+const thread=document.querySelector('.thread');
+const onScroll=()=>{
+  const sc=window.scrollY>60;
+  header.classList.toggle('scrolled',sc);
+  brandMark.src=sc?'assets/lockup_black.png':'assets/lockup_white.png';
+  thread.classList.toggle('on',window.scrollY>window.innerHeight*.75);
+};
+window.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+
+const toggle=document.getElementById('navToggle');
+const nav=document.getElementById('nav');
+toggle.addEventListener('click',()=>{toggle.classList.toggle('open');nav.classList.toggle('open');});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{toggle.classList.remove('open');nav.classList.remove('open');}));
+
+const io=new IntersectionObserver(es=>{
+  es.forEach((e,i)=>{
+    if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*80);io.unobserve(e.target);}
+  });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
