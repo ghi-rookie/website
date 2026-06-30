@@ -278,7 +278,11 @@ section{position:relative}
   gap:clamp(40px,6vw,88px);align-items:center;margin-top:56px;
 }
 .about-photo{position:relative}
-.about-photo img{width:100%}
+.about-photo img{
+  display:block;width:100%;
+  border:1px solid var(--line);
+  box-shadow:0 18px 40px -24px rgba(20,17,14,.28);
+}
 .about-photo::after{
   content:'gigantum humeris insidentes';
   position:absolute;top:18px;right:-14px;
