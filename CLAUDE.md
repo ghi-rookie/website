@@ -65,9 +65,9 @@ assets/
 
 ## AI導入支援サービスLP（/ax/）
 
-- `ax/index.html`（LP本体）、`ax/privacy.html`、`ax/thanks.html`、`ax/images/`（AI生成写真のWebP、OG画像）。2026-11-12公開
+- `ax/index.html`（LP本体）、`ax/privacy.html`、`ax/thanks/index.html`（送信完了。フォルダ形式にしないとNetlifyが既定の英語ページを出す）、`ax/images/`（AI生成写真のWebP、OG画像）。2026-11-12公開
 - トンマナは本体と別（白地・ネイビー `#1A2B4A`・オレンジ `#E37222`、Noto Sans JP＋Georgia）。本体の和紙・Cormorantは使わない
 - 本体側は Services セクション末尾の誘導バナー（`.svc-ax`）だけ。LP修正で本体の他の箇所を触らない
-- 問い合わせフォームは Netlify Forms（`name="ax-contact"`、ハニーポット `bot-field`、送信後 `thanks.html`）。通知先はNetlify管理画面で設定
+- 問い合わせフォームは Netlify Forms（`name="ax-contact"`、ハニーポット `bot-field`、送信後 `/ax/thanks/`、件名は hidden の `subject` 欄）。通知先は contact@g-h-i.jp（Netlify Forms → Submission notifications で設定済み、2026-11-12）
 - 文言・構成の正本はClaudeプロジェクト「地方AXプロジェクト」の `claude/LP_構成案_v2_20261111.md`
 - 写真には「AIによるイメージ」の注記を付ける。モデルケースの数値（削減時間・割合）は載せない
