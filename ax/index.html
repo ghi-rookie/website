@@ -203,8 +203,8 @@ table.cmp td:first-child{color:var(--sub);font-weight:500;white-space:nowrap}
 .form{background:#fff;color:var(--ink);border-radius:8px;padding:34px 34px 30px}
 .form h3{color:var(--navy);font-size:1.15rem;font-weight:700;margin-bottom:18px}
 .f{margin-bottom:16px}
-.f label{display:block;font-size:.88rem;font-weight:500;color:var(--navy);margin-bottom:6px}
-.f label .req{color:var(--orange);font-size:.75rem;margin-left:6px}
+.f .lab{margin-bottom:6px;font-size:.88rem;font-weight:500;color:var(--navy)}
+.f .req{color:var(--orange);font-size:.75rem;margin-left:6px}
 .f input[type=text],.f input[type=email],.f input[type=tel],.f select,.f textarea{width:100%;border:1px solid #CDD2DA;border-radius:4px;padding:11px 12px;font:inherit;font-size:.95rem;background:#fff;color:var(--ink)}
 .f textarea{min-height:120px;resize:vertical}
 .f input:focus,.f select:focus,.f textarea:focus{outline:2px solid var(--orange);outline-offset:1px;border-color:var(--orange)}
@@ -575,20 +575,21 @@ table.cmp td:first-child{color:var(--sub);font-weight:500;white-space:nowrap}
         <h3>初回相談のお申し込み</h3>
         <form name="ax-contact" method="POST" action="/ax/thanks/" data-netlify="true" netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="ax-contact">
+          <input type="hidden" name="subject" value="【LP】初回相談のお申し込み">
           <p class="hp"><label>このフィールドは入力しないでください <input name="bot-field"></label></p>
-          <div class="f"><label for="company">会社名<span class="req">必須</span></label><input type="text" id="company" name="company" required autocomplete="organization"></div>
+          <div class="f"><div class="lab"><label for="company">会社名</label><span class="req">必須</span></div><input type="text" id="company" name="company" required autocomplete="organization"></div>
           <div class="f2">
-            <div class="f"><label for="name">お名前<span class="req">必須</span></label><input type="text" id="name" name="name" required autocomplete="name"></div>
-            <div class="f"><label for="email">メールアドレス<span class="req">必須</span></label><input type="email" id="email" name="email" required autocomplete="email"></div>
+            <div class="f"><div class="lab"><label for="name">お名前</label><span class="req">必須</span></div><input type="text" id="name" name="name" required autocomplete="name"></div>
+            <div class="f"><div class="lab"><label for="email">メールアドレス</label><span class="req">必須</span></div><input type="email" id="email" name="email" required autocomplete="email"></div>
           </div>
           <div class="f2">
-            <div class="f"><label for="tel">電話番号</label><input type="tel" id="tel" name="tel" autocomplete="tel"></div>
-            <div class="f"><label for="industry">業種</label>
+            <div class="f"><div class="lab"><label for="tel">電話番号</label></div><input type="tel" id="tel" name="tel" autocomplete="tel"></div>
+            <div class="f"><div class="lab"><label for="industry">業種</label></div>
               <select id="industry" name="industry"><option value="">選択してください</option><option>製造業</option><option>建設業</option><option>卸売・小売業</option><option>サービス業</option><option>その他</option></select></div>
           </div>
-          <div class="f"><label for="size">従業員数</label>
+          <div class="f"><div class="lab"><label for="size">従業員数</label></div>
             <select id="size" name="size"><option value="">選択してください</option><option>〜20名</option><option>21〜50名</option><option>51〜100名</option><option>101〜300名</option><option>301名〜</option></select></div>
-          <div class="f"><label for="message">ご相談内容</label><textarea id="message" name="message" placeholder="困っている業務、聞いてみたいことなど。空欄でも構いません。"></textarea></div>
+          <div class="f"><div class="lab"><label for="message">ご相談内容</label></div><textarea id="message" name="message" placeholder="困っている業務、聞いてみたいことなど。空欄でも構いません。"></textarea></div>
           <label class="agree"><input type="checkbox" name="agree" required><span><a href="privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>に同意する<span class="req" style="color:var(--orange);font-size:.75rem;margin-left:6px">必須</span></span></label>
           <button class="btn" type="submit">初回相談を申し込む</button>
         </form>
