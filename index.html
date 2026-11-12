@@ -243,6 +243,22 @@ section{position:relative}
 .svc h3{font-size:1.12rem;font-weight:500;letter-spacing:.08em;margin-bottom:8px}
 .svc p{font-size:.88rem;color:var(--ink-2);line-height:2.05;max-width:620px}
 
+
+/* AI導入支援サービス（AX）への誘導 */
+.svc-ax{
+  display:grid;grid-template-columns:minmax(150px,220px) 1fr auto;gap:clamp(20px,4vw,56px);
+  align-items:center;margin-top:44px;padding:36px 32px;
+  background:var(--paper-2);border:1px solid var(--line);
+  transition:background .4s ease,border-color .4s ease;
+}
+.svc-ax:hover{background:var(--white);border-color:var(--orange)}
+.svc-ax .en{font-family:var(--serif);font-style:italic;font-size:1.05rem;color:var(--orange)}
+.svc-ax .to{font-size:.78rem;color:var(--ink-3);letter-spacing:.06em;margin-bottom:4px}
+.svc-ax h3{font-size:1.12rem;font-weight:500;letter-spacing:.08em;margin-bottom:6px}
+.svc-ax p.d{font-size:.88rem;color:var(--ink-2);line-height:2.05;max-width:620px}
+.svc-ax .go{font-size:.8rem;letter-spacing:.2em;color:var(--orange);white-space:nowrap}
+@media (max-width:860px){.svc-ax{grid-template-columns:1fr;gap:10px;padding:28px 22px}.svc-ax .go{margin-top:6px}}
+
 /* ============ Approach（墨） ============ */
 .approach{background:var(--ink);color:var(--paper)}
 .approach .tate{color:rgba(251,248,243,.5)}
@@ -493,6 +509,15 @@ footer{background:var(--ink);color:rgba(251,248,243,.55);padding:72px var(--gutt
         </div>
       </div>
     </div>
+    <a class="svc-ax reveal" href="ax/">
+      <div class="en">AI Transformation</div>
+      <div>
+        <p class="to">中堅・中小企業の経営者の皆様へ</p>
+        <h3>AI導入支援サービス（AX）</h3>
+        <p class="d">AI導入の構想から、社員育成・業務への組み込み・定着まで一貫して支援します。</p>
+      </div>
+      <span class="go">詳しく見る →</span>
+    </a>
   </div>
 </section>
 
