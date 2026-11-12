@@ -48,6 +48,9 @@ assets/
 
 ## SEO
 
+- サイト直下に `robots.txt`（AIクローラ許可、/thanks/ 系は除外）、`sitemap.xml`（ページ追加時に更新）、`llms.txt`（AI向けの会社・サービス要約。文言変更時に同期）を設置（2026-11-12）
+- LPの `<title>` は検索向けに「中堅・中小企業のAI導入支援（伴走型）｜AIで、会社を強くする。｜株式会社G.H.I.」、`og:title` は共有向けにブランドコピー先頭。LPには Service と FAQPage のJSON-LDを設置（FAQ本文を変えたらJSON-LDも同期）
+
 - title: 「智慧を、紡ぐ。| 株式会社G.H.I. — 新規事業開発・事業戦略アドバイザリー」
 - 重点キーワード: 新規事業開発 / 事業戦略 / 海外進出支援 / DX / 経営者コーチング
 - OGP・Twitterカード・JSON-LD（ProfessionalService）設定済み
