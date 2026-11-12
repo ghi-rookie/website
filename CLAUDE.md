@@ -62,3 +62,12 @@ assets/
 
 - ホスティング: Netlify（GitHubリポジトリ連携 / mainへのpushで自動デプロイ）
 - ドメイン: g-h-i.jp（さくらインターネットで取得、DNSでNetlifyへ向ける）
+
+## AI導入支援サービスLP（/ax/）
+
+- `ax/index.html`（LP本体）、`ax/privacy.html`、`ax/thanks.html`、`ax/images/`（AI生成写真のWebP、OG画像）。2026-11-12公開
+- トンマナは本体と別（白地・ネイビー `#1A2B4A`・オレンジ `#E37222`、Noto Sans JP＋Georgia）。本体の和紙・Cormorantは使わない
+- 本体側は Services セクション末尾の誘導バナー（`.svc-ax`）だけ。LP修正で本体の他の箇所を触らない
+- 問い合わせフォームは Netlify Forms（`name="ax-contact"`、ハニーポット `bot-field`、送信後 `thanks.html`）。通知先はNetlify管理画面で設定
+- 文言・構成の正本はClaudeプロジェクト「地方AXプロジェクト」の `claude/LP_構成案_v2_20261111.md`
+- 写真には「AIによるイメージ」の注記を付ける。モデルケースの数値（削減時間・割合）は載せない
