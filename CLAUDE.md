@@ -43,6 +43,8 @@ assets/
 - Track Recordは**業界・領域の抽象表現のみ**（金融・保険/小売・コマース/テクノロジー/ヘルスケア/エンタメ・メディア/海外）。守秘義務のため具体的な企業名・案件名は書かない
 - 問い合わせ: `contact@g-h-i.jp`（Google Workspaceエイリアス）。mailtoリンクは件名
   `?subject=【G.H.I.】お問い合わせ`（URLエンコード済み）付き
+- Contactセクションには mailto ボタンに加えて Netlify Forms のフォーム（`name="corporate-contact"`、下線だけの入力欄、送信後 `/thanks/`、件名は hidden の `subject` 欄）を併設（2026-11-12）。通知はLPと共通の設定（Any form → contact@g-h-i.jp）
+- `thanks/index.html`（送信完了）、`privacy/index.html`（サイト全体のプライバシーポリシー）は本体トンマナの独立ページ
 
 ## SEO
 

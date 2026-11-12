@@ -357,6 +357,31 @@ section{position:relative}
 }
 .btn:hover{background:var(--orange);border-color:var(--orange);color:var(--white)}
 
+
+/* Contact form（本体トンマナ：下線だけの入力欄、細い罫） */
+.contact .cform-or{margin:44px auto 0;font-size:.8rem;letter-spacing:.12em;color:rgba(255,255,255,.6)}
+.cform{max-width:640px;margin:22px auto 0;text-align:left}
+.cform-hp{display:none}
+.cform-row{display:grid;grid-template-columns:1fr 1fr;gap:0 32px}
+.cform-f{margin-bottom:26px}
+.cform-lab{font-size:.74rem;letter-spacing:.18em;color:rgba(255,255,255,.75);margin-bottom:6px}
+.cform .req{font-size:.62rem;letter-spacing:.14em;color:var(--apricot);margin-left:8px}
+.cform input[type=text],.cform input[type=email],.cform select,.cform textarea{
+  width:100%;background:transparent;border:0;border-bottom:1px solid rgba(255,255,255,.4);
+  color:var(--white);font:inherit;font-size:.95rem;padding:10px 0;border-radius:0;
+  transition:border-color .3s ease;
+}
+.cform select{appearance:none;-webkit-appearance:none;cursor:pointer;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23F3BE8E' stroke-width='1.2'/%3E%3C/svg%3E") no-repeat right 4px center;}
+.cform select option{color:var(--ink);background:var(--paper)}
+.cform textarea{resize:vertical;min-height:110px}
+.cform input:focus,.cform select:focus,.cform textarea:focus{outline:none;border-bottom-color:var(--apricot)}
+.cform-agree{display:flex;align-items:flex-start;gap:10px;font-size:.8rem;letter-spacing:.06em;color:rgba(255,255,255,.8);margin:4px 0 30px}
+.cform-agree input{margin-top:5px;accent-color:var(--orange)}
+.cform-agree a{color:var(--apricot);text-decoration:underline;text-underline-offset:3px}
+.cform-btn{display:block;margin:0 auto;background:transparent;color:var(--white);cursor:pointer;font-family:inherit}
+@media(max-width:860px){.cform-row{grid-template-columns:1fr;gap:0}}
+
 /* ============ Footer ============ */
 footer{background:var(--ink);color:rgba(251,248,243,.55);padding:72px var(--gutter) 44px}
 .foot{max-width:1120px;margin:0 auto}
@@ -644,6 +669,24 @@ footer{background:var(--ink);color:rgba(251,248,243,.55);padding:72px var(--gutt
     <h2>事業の、その先へ。</h2>
     <p>新規事業のご相談、経営課題のご相談など、まずはお気軽にお問い合わせください。</p>
     <a href="mailto:contact@g-h-i.jp?subject=%E3%80%90G.H.I.%E3%80%91%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B" class="btn">お問い合わせ</a>
+    <p class="cform-or">または、下記のフォームからお送りください。</p>
+    <form class="cform" name="corporate-contact" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="corporate-contact">
+      <input type="hidden" name="subject" value="【G.H.I.】お問い合わせ（サイトフォーム）">
+      <p class="cform-hp"><label>このフィールドは入力しないでください <input name="bot-field"></label></p>
+      <div class="cform-row">
+        <div class="cform-f"><div class="cform-lab"><label for="c-name">お名前</label><span class="req">必須</span></div><input type="text" id="c-name" name="name" required autocomplete="name"></div>
+        <div class="cform-f"><div class="cform-lab"><label for="c-email">メールアドレス</label><span class="req">必須</span></div><input type="email" id="c-email" name="email" required autocomplete="email"></div>
+      </div>
+      <div class="cform-row">
+        <div class="cform-f"><div class="cform-lab"><label for="c-company">会社名・ご所属</label></div><input type="text" id="c-company" name="company" autocomplete="organization"></div>
+        <div class="cform-f"><div class="cform-lab"><label for="c-topic">ご相談の種類</label></div>
+          <select id="c-topic" name="topic"><option value="">選択してください</option><option>新規事業・事業戦略</option><option>経営者コーチング</option><option>人事・組織開発</option><option>DX・AI導入</option><option>海外進出</option><option>その他</option></select></div>
+      </div>
+      <div class="cform-f"><div class="cform-lab"><label for="c-message">ご相談内容</label></div><textarea id="c-message" name="message" rows="5"></textarea></div>
+      <label class="cform-agree"><input type="checkbox" name="agree" required><span><a href="privacy/" target="_blank" rel="noopener">プライバシーポリシー</a>に同意する<span class="req">必須</span></span></label>
+      <button type="submit" class="btn cform-btn">送信する</button>
+    </form>
   </div>
 </section>
 
