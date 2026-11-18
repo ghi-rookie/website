@@ -3,6 +3,8 @@ User-agent: *
 Allow: /
 Disallow: /thanks/
 Disallow: /ax/thanks/
+Disallow: /ax/download/thanks/
+Disallow: /ax/docs/
 
 # AI crawlers are welcome
 User-agent: GPTBot

@@ -76,3 +76,4 @@ assets/
 - 問い合わせフォームは Netlify Forms（`name="ax-contact"`、ハニーポット `bot-field`、送信後 `/ax/thanks/`、件名は hidden の `subject` 欄）。通知先は contact@g-h-i.jp（Netlify Forms → Submission notifications で設定済み、2026-11-12）
 - 文言・構成の正本はClaudeプロジェクト「地方AXプロジェクト」の `claude/LP_構成案_v2_20261111.md`
 - 写真には「AIによるイメージ」の注記を付ける。モデルケースの数値（削減時間・割合）は載せない
+- **資料ダウンロード導線（2026-11-18）**: LPのCTAは「資料をダウンロードする」（主・オレンジ）＋「初回相談（60分・無料）」（副）の2ボタン構成。`ax/download/index.html`（会社名・役職・氏名・メール＋同意チェックで送信可、Netlify Forms `name="ax-download"`）→ `ax/download/thanks/index.html`（自動ダウンロード＋「初回相談に申し込む」で `/ax/#contact` へ戻すループ）。PDFは `ax/docs/GHI_AX_service_guide_k7m2q9.pdf`（推測されにくい名前。差し替え時は同名で上書き）。`/ax/docs/` と `/ax/download/thanks/` は robots.txt で除外し `_headers` で noindex

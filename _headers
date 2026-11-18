@@ -1,0 +1,5 @@
+/ax/docs/*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-cache
+/ax/download/thanks/*
+  X-Robots-Tag: noindex
